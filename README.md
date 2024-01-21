@@ -1,27 +1,25 @@
-# PipesApp
+# Ng-Pipes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+Ng-Pipes is an Angular 15 application that demonstrates the capabilities of Angular Pipes. This project features a diverse collection of pipes designed to efficiently transform and refine data presentation. Covering aspects from number and date formatting to addressing less common scenarios, Ng-Pipes integrates the styling of PrimeNG for a clean and responsive user interface.
 
-## Development server
+**Visit the live demo: [ng-pipes.netlify.app](https://ng-pipes.netlify.app)**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Key Features
 
-## Code scaffolding
+- **Numeric Pipes:** Explore various numeric pipes commonly included in the Common Module.
+- **Uncommon Pipes:** Discover less common pipes suitable for unique data transformations.
+- **Custom Pipes:** Delve into custom pipes created by the Ng-Pipes team to enhance your data presentation.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies
 
-## Build
+- Angular 15
+- PrimeNG Styling
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Getting Started
 
-## Running unit tests
+1. Clone the repository.
+2. Install dependencies: `npm install`.
+3. Build for production: `ng build --prod`.
+4. Deploy using your preferred hosting service or [Netlify](https://www.netlify.com/).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Ng-Pipes is an open-source project, and contributions are welcome. Feel free to explore, provide feedback, or create your custom pipes to improve your Angular experience.
