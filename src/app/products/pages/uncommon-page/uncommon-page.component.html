@@ -1,0 +1,119 @@
+<!-- Página de Pipes no tan comunes -->
+<div class="container">
+
+  <!-- Panel con información general -->
+  <p-panel header="Uncommon Pipes" class="p-1">
+    <p>
+      Estos son algunos de los pipes menos comunes incluidos en Angular, generalmente parte del Common Module.
+    </p>
+  </p-panel>
+
+  <!-- Sección para i18nSelect Pipe -->
+  <div class="col-12">
+    <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
+
+      <p>
+        Saludos {{ name }}, es un placer
+        {{ gender | i18nSelect:invitationMap }}
+        a nuestro evento.
+      </p>
+
+      <p-button
+        (click)="changeClient()"
+        label="Cambiar persona"
+      ></p-button>
+
+      <p>
+        <strong>i18nSelect Pipe:</strong> Selecciona una cadena basada en un valor específico.
+      </p>
+    </p-fieldset>
+  </div>
+
+  <!-- Sección para i18nPlural Pipe -->
+  <div class="col-12">
+    <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+
+      <p>
+        Actualmente {{ clients.length | i18nPlural:clientsMap }}
+      </p>
+
+      <p-button
+        (click)="deleteClient()"
+        label="Borrar cliente"
+      ></p-button>
+
+      <p>
+        <strong>i18nPlural Pipe:</strong> Maneja la pluralización de una cadena basada en un número.
+      </p>
+    </p-fieldset>
+  </div>
+
+  <!-- Sección para Slice Pipe -->
+  <div class="col-12">
+    <p-fieldset legend="Slice Pipe" [toggleable]="true">
+      <b>Original</b>
+      <pre>{{ clients }}</pre>
+
+      <b>slice:0:2</b>
+      <pre>{{ clients | slice:0:2 }}</pre>
+
+      <b>slice:1:2</b>
+      <pre>{{ clients | slice:1:2 }}</pre>
+
+      <b>slice:1:3</b>
+      <pre>{{ clients | slice:1:3 }}</pre>
+
+      <b>slice:3:4</b>
+      <pre>{{ clients | slice:3:4 }}</pre>
+
+      <b>slice:0:-3</b>
+      <pre>{{ clients | slice:0:-3 }}</pre>
+
+      <p>
+        <strong>Slice Pipe:</strong> Extrae una porción de una cadena o un array.
+      </p>
+    </p-fieldset>
+  </div>
+
+  <!-- Sección para Json Pipe -->
+  <div class="col-12">
+    <p-fieldset legend="Json Pipe" [toggleable]="true">
+      <pre>{{ person | json }}</pre>
+      <p>
+        <strong>Json Pipe:</strong> Convierte un objeto a su representación JSON.
+      </p>
+    </p-fieldset>
+  </div>
+
+  <!-- Sección para KeyValue Pipe -->
+  <div class="col-12">
+    <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+
+      <ul>
+        <li *ngFor="let item of person | keyvalue">
+          <b>{{ item.key | titlecase }}:</b> {{ item.value }}
+        </li>
+      </ul>
+
+      <p>
+        <strong>KeyValue Pipe:</strong> Itera sobre las propiedades de un objeto y las muestra como pares clave-valor.
+      </p>
+    </p-fieldset>
+  </div>
+
+  <!-- Sección para Async Pipe -->
+  <div class="col-12">
+    <p-fieldset legend="Async Pipe" [toggleable]="true">
+      <pre *ngIf="!(myObservableTimer | async)">Resolviendo observable</pre>
+      <pre>{{ myObservableTimer | async }}</pre>
+
+      <pre *ngIf="!(promiseValue | async)">Resolviendo promesa</pre>
+      <pre>{{ promiseValue | async }}</pre>
+
+      <p>
+        <strong>Async Pipe:</strong> Maneja eficientemente observables y promesas.
+      </p>
+    </p-fieldset>
+  </div>
+
+</div>

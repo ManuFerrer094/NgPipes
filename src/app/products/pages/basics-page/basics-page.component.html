@@ -1,0 +1,125 @@
+<!-- Introducción a los Pipes Básicos de Angular -->
+<p-panel header="Pipes Básicos" class="p-1">
+  <p>
+    En Angular, los pipes son transformadores de datos que permiten modificar la presentación de la información en la interfaz de usuario. A continuación, se presentan algunos pipes básicos comúnmente incluidos en el Common Module.
+  </p>
+</p-panel>
+
+<!-- Campo de entrada para el nombre -->
+<div class="col-12">
+  <!-- Limita la longitud a 20 caracteres y previene la inyección de código -->
+  <input pInputText [(ngModel)]="userName" placeholder="Introduce tu nombre" maxlength="20" (ngModelChange)="sanitizeInput()">
+</div>
+
+<div class="grid">
+  <!-- Uppercase Pipe -->
+  <div class="col-12 md:col-4">
+    <p-card header="Uppercase Pipe">
+      <p>
+        El <strong>Uppercase Pipe</strong> convierte el texto a mayúsculas.
+      </p>
+      <!-- Ejemplos de código -->
+      <pre><code>public nameLower: string = '{{ userName }}';</code></pre>
+      <!-- Resultado -->
+      <code>Resultado: {{ userName | uppercase }}</code>
+    </p-card>
+  </div>
+
+  <!-- Lowercase Pipe -->
+  <div class="col-12 md:col-4">
+    <p-card header="Lowercase Pipe">
+      <p>
+        El <strong>Lowercase Pipe</strong> convierte el texto a minúsculas.
+      </p>
+      <!-- Ejemplos de código -->
+      <pre><code>public nameUpper: string = '{{ userName }}';</code></pre>
+      <!-- Resultado -->
+      <code>Resultado: {{ userName | lowercase }}</code>
+    </p-card>
+  </div>
+
+  <!-- Titlecase Pipe -->
+  <div class="col-12 md:col-4">
+    <p-card header="Titlecase Pipe">
+      <p>
+        El <strong>Titlecase Pipe</strong> convierte la primera letra de cada palabra a mayúsculas.
+      </p>
+      <!-- Ejemplos de código -->
+      <pre><code>public fullName: string = '{{ userName }}';</code></pre>
+      <!-- Resultado -->
+      <code>Resultado: {{ userName | titlecase }}</code>
+    </p-card>
+  </div>
+
+  <!-- Date Pipe Examples -->
+  <div class="col-12 md:col-6">
+    <p-card header="Date Pipe Examples">
+      <p>
+        El <strong>Date Pipe</strong> formatea las fechas según el formato especificado.
+      </p>
+      <!-- Datepicker para seleccionar la fecha -->
+      <div class="col-12">
+        <p-calendar [(ngModel)]="selectedDate"></p-calendar>
+      </div>
+      <!-- Ejemplos de código -->
+      <pre><code>public fecha: Date = new Date();</code></pre>
+      <!-- Resultado -->
+      <ul>
+        <li>{{ selectedDate }}</li>
+        <li>{{ selectedDate | date }}</li>
+        <li>{{ selectedDate | date:'short' }}</li>
+        <li>{{ selectedDate | date:'long' }}</li>
+        <li>{{ selectedDate | date:'MMMM' }}</li>
+        <li>{{ selectedDate | date:'MMMM dd, yyyy' }}</li>
+      </ul>
+
+      <hr>
+
+      <!-- Ejemplos adicionales de código -->
+      <pre><code>public customDate: Date = new Date();</code></pre>
+      <!-- Resultado -->
+      <ul>
+        <li>{{ selectedDate }}</li>
+        <li>{{ selectedDate | date }}</li>
+        <li>{{ selectedDate | date:'short' }}</li>
+        <li>{{ selectedDate | date:'long' }}</li>
+        <li>{{ selectedDate | date:'MMMM' }}</li>
+        <li>{{ selectedDate | date:'MMMM dd, yyyy' }}</li>
+      </ul>
+    </p-card>
+  </div>
+
+  <!-- Custom Date Pipe Examples -->
+  <div class="col-12 md:col-6">
+    <p-card header="Custom Date Pipe Examples">
+      <p>
+        También puedes utilizar el <strong>Date Pipe</strong> para formatear fechas personalizadas.
+      </p>
+      <!-- Datepicker para seleccionar la fecha -->
+      <div class="col-12">
+        <p-calendar [(ngModel)]="customDate"></p-calendar>
+      </div>
+      <!-- Ejemplos de código -->
+      <pre><code>public customDate: Date = new Date();</code></pre>
+      <!-- Resultado -->
+      <ul>
+        <li>{{ customDate }}</li>
+        <li>{{ customDate | date }}</li>
+        <li>{{ customDate | date:'short' }}</li>
+        <li>{{ customDate | date:'long' }}</li>
+        <li>{{ customDate | date:'MMMM' }}</li>
+        <li>{{ customDate | date:'MMMM dd, yyyy' }}</li>
+      </ul>
+
+      <hr>
+
+      <ul>
+        <li>{{ customDate | date:'long':'GMT-6' }}</li>
+        <li>{{ customDate | date:'long':'GMT-4' }}</li>
+        <li>{{ customDate | date:'long':'':'es-HN' }}</li>
+        <li>{{ customDate | date:'long':'':'en-US' }}</li>
+        <li>{{ customDate | date:'long':'':'fr-CA' }}</li>
+      </ul>
+    </p-card>
+  </div>
+</div>
