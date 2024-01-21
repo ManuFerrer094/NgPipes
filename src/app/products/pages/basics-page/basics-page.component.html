@@ -1,14 +1,14 @@
-<!-- Introducción a los Pipes Básicos de Angular -->
-<p-panel header="Pipes Básicos" class="p-1">
+<!-- Introduction to Basic Angular Pipes -->
+<p-panel header="Basic Pipes" class="p-1">
   <p>
-    En Angular, los pipes son transformadores de datos que permiten modificar la presentación de la información en la interfaz de usuario. A continuación, se presentan algunos pipes básicos comúnmente incluidos en el Common Module.
+    In Angular, pipes are data transformers that allow modifying the presentation of information in the user interface. Below are some basic pipes commonly included in the Common Module.
   </p>
 </p-panel>
 
-<!-- Campo de entrada para el nombre -->
+<!-- Input field for the name -->
 <div class="col-12">
-  <!-- Limita la longitud a 20 caracteres y previene la inyección de código -->
-  <input pInputText [(ngModel)]="userName" placeholder="Introduce tu nombre" maxlength="20" (ngModelChange)="sanitizeInput()">
+  <!-- Limit the length to 20 characters and prevent code injection -->
+  <input pInputText [(ngModel)]="userName" placeholder="Enter your name" maxlength="20" (ngModelChange)="sanitizeInput()">
 </div>
 
 <div class="grid">
@@ -16,12 +16,12 @@
   <div class="col-12 md:col-4">
     <p-card header="Uppercase Pipe">
       <p>
-        El <strong>Uppercase Pipe</strong> convierte el texto a mayúsculas.
+        The <strong>Uppercase Pipe</strong> converts text to uppercase.
       </p>
-      <!-- Ejemplos de código -->
+      <!-- Code Examples -->
       <pre><code>public nameLower: string = '{{ userName }}';</code></pre>
-      <!-- Resultado -->
-      <code>Resultado: {{ userName | uppercase }}</code>
+      <!-- Result -->
+      <code>Result: {{ userName | uppercase }}</code>
     </p-card>
   </div>
 
@@ -29,12 +29,12 @@
   <div class="col-12 md:col-4">
     <p-card header="Lowercase Pipe">
       <p>
-        El <strong>Lowercase Pipe</strong> convierte el texto a minúsculas.
+        The <strong>Lowercase Pipe</strong> converts text to lowercase.
       </p>
-      <!-- Ejemplos de código -->
+      <!-- Code Examples -->
       <pre><code>public nameUpper: string = '{{ userName }}';</code></pre>
-      <!-- Resultado -->
-      <code>Resultado: {{ userName | lowercase }}</code>
+      <!-- Result -->
+      <code>Result: {{ userName | lowercase }}</code>
     </p-card>
   </div>
 
@@ -42,12 +42,12 @@
   <div class="col-12 md:col-4">
     <p-card header="Titlecase Pipe">
       <p>
-        El <strong>Titlecase Pipe</strong> convierte la primera letra de cada palabra a mayúsculas.
+        The <strong>Titlecase Pipe</strong> converts the first letter of each word to uppercase.
       </p>
-      <!-- Ejemplos de código -->
+      <!-- Code Examples -->
       <pre><code>public fullName: string = '{{ userName }}';</code></pre>
-      <!-- Resultado -->
-      <code>Resultado: {{ userName | titlecase }}</code>
+      <!-- Result -->
+      <code>Result: {{ userName | titlecase }}</code>
     </p-card>
   </div>
 
@@ -55,15 +55,15 @@
   <div class="col-12 md:col-6">
     <p-card header="Date Pipe Examples">
       <p>
-        El <strong>Date Pipe</strong> formatea las fechas según el formato especificado.
+        The <strong>Date Pipe</strong> formats dates according to the specified format.
       </p>
-      <!-- Datepicker para seleccionar la fecha -->
+      <!-- Datepicker to select the date -->
       <div class="col-12">
         <p-calendar [(ngModel)]="selectedDate"></p-calendar>
       </div>
-      <!-- Ejemplos de código -->
+      <!-- Code Examples -->
       <pre><code>public fecha: Date = new Date();</code></pre>
-      <!-- Resultado -->
+      <!-- Result -->
       <ul>
         <li>{{ selectedDate }}</li>
         <li>{{ selectedDate | date }}</li>
@@ -75,9 +75,9 @@
 
       <hr>
 
-      <!-- Ejemplos adicionales de código -->
+      <!-- Additional Code Examples -->
       <pre><code>public customDate: Date = new Date();</code></pre>
-      <!-- Resultado -->
+      <!-- Result -->
       <ul>
         <li>{{ selectedDate }}</li>
         <li>{{ selectedDate | date }}</li>
@@ -93,15 +93,15 @@
   <div class="col-12 md:col-6">
     <p-card header="Custom Date Pipe Examples">
       <p>
-        También puedes utilizar el <strong>Date Pipe</strong> para formatear fechas personalizadas.
+        You can also use the <strong>Date Pipe</strong> to format custom dates.
       </p>
-      <!-- Datepicker para seleccionar la fecha -->
+      <!-- Datepicker to select the date -->
       <div class="col-12">
         <p-calendar [(ngModel)]="customDate"></p-calendar>
       </div>
-      <!-- Ejemplos de código -->
+      <!-- Code Examples -->
       <pre><code>public customDate: Date = new Date();</code></pre>
-      <!-- Resultado -->
+      <!-- Result -->
       <ul>
         <li>{{ customDate }}</li>
         <li>{{ customDate | date }}</li>

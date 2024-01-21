@@ -1,54 +1,51 @@
-<!-- Página de Pipes no tan comunes -->
+<!-- Uncommon Pipes Page -->
 <div class="container">
 
-  <!-- Panel con información general -->
+  <!-- Panel with General Information -->
   <p-panel header="Uncommon Pipes" class="p-1">
     <p>
-      Estos son algunos de los pipes menos comunes incluidos en Angular, generalmente parte del Common Module.
+      These are some of the less common pipes included in Angular, usually part of the Common Module.
     </p>
   </p-panel>
 
-  <!-- Sección para i18nSelect Pipe -->
+  <!-- Section for i18nSelect Pipe -->
   <div class="col-12">
     <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
 
       <p>
-        Saludos {{ name }}, es un placer
-        {{ gender | i18nSelect:invitationMap }}
-        a nuestro evento.
+        Greetings {{ name }}, it's a pleasure to {{ gender | i18nSelect:invitationMap }} at our event.
       </p>
 
       <p-button
         (click)="changeClient()"
-        label="Cambiar persona"
+        label="Change person"
       ></p-button>
-
       <p>
-        <strong>i18nSelect Pipe:</strong> Selecciona una cadena basada en un valor específico.
+        <strong>i18nSelect Pipe:</strong> Selects a string based on a specific value.
       </p>
     </p-fieldset>
   </div>
 
-  <!-- Sección para i18nPlural Pipe -->
+  <!-- Section for i18nPlural Pipe -->
   <div class="col-12">
     <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
 
       <p>
-        Actualmente {{ clients.length | i18nPlural:clientsMap }}
+        Currently {{ clients.length | i18nPlural:clientsMap }}
       </p>
 
       <p-button
         (click)="deleteClient()"
-        label="Borrar cliente"
+        label="Delete client"
       ></p-button>
 
       <p>
-        <strong>i18nPlural Pipe:</strong> Maneja la pluralización de una cadena basada en un número.
+        <strong>i18nPlural Pipe:</strong> Handles pluralization of a string based on a number.
       </p>
     </p-fieldset>
   </div>
 
-  <!-- Sección para Slice Pipe -->
+  <!-- Section for Slice Pipe -->
   <div class="col-12">
     <p-fieldset legend="Slice Pipe" [toggleable]="true">
       <b>Original</b>
@@ -70,22 +67,22 @@
       <pre>{{ clients | slice:0:-3 }}</pre>
 
       <p>
-        <strong>Slice Pipe:</strong> Extrae una porción de una cadena o un array.
+        <strong>Slice Pipe:</strong> Extracts a portion of a string or an array.
       </p>
     </p-fieldset>
   </div>
 
-  <!-- Sección para Json Pipe -->
+  <!-- Section for Json Pipe -->
   <div class="col-12">
     <p-fieldset legend="Json Pipe" [toggleable]="true">
       <pre>{{ person | json }}</pre>
       <p>
-        <strong>Json Pipe:</strong> Convierte un objeto a su representación JSON.
+        <strong>Json Pipe:</strong> Converts an object to its JSON representation.
       </p>
     </p-fieldset>
   </div>
 
-  <!-- Sección para KeyValue Pipe -->
+  <!-- Section for KeyValue Pipe -->
   <div class="col-12">
     <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
 
@@ -96,24 +93,23 @@
       </ul>
 
       <p>
-        <strong>KeyValue Pipe:</strong> Itera sobre las propiedades de un objeto y las muestra como pares clave-valor.
+        <strong>KeyValue Pipe:</strong> Iterates over the properties of an object and displays them as key-value pairs.
       </p>
     </p-fieldset>
   </div>
 
-  <!-- Sección para Async Pipe -->
+  <!-- Section for Async Pipe -->
   <div class="col-12">
     <p-fieldset legend="Async Pipe" [toggleable]="true">
-      <pre *ngIf="!(myObservableTimer | async)">Resolviendo observable</pre>
+      <pre *ngIf="!(myObservableTimer | async)">Resolving observable</pre>
       <pre>{{ myObservableTimer | async }}</pre>
 
-      <pre *ngIf="!(promiseValue | async)">Resolviendo promesa</pre>
+      <pre *ngIf="!(promiseValue | async)">Resolving promise</pre>
       <pre>{{ promiseValue | async }}</pre>
 
       <p>
-        <strong>Async Pipe:</strong> Maneja eficientemente observables y promesas.
+        <strong>Async Pipe:</strong> Efficiently handles observables and promises.
       </p>
     </p-fieldset>
   </div>
-
 </div>

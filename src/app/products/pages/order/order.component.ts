@@ -34,19 +34,17 @@ export class OrderComponent {
       color: Color.red,
     },
     {
-      name: 'Linterna Verde',
+      name: 'Green Lantern',
       canFly: true,
       color: Color.green,
     },
   ]
 
-
-  toggleUpperCase():void {
+  toggleUpperCase(): void {
     this.isUpperCase = !this.isUpperCase;
   }
 
-  changeOrder( value: keyof Hero ){
+  changeOrder(value: keyof Hero): void {
     this.orderBy = value;
   }
-
 }

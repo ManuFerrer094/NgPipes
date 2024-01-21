@@ -10,24 +10,24 @@ export class UncommonPageComponent {
 
   // i18n Select
   public name: string = 'Manuel';
-  public gender: 'male'|'female' = 'male';
+  public gender: 'male' | 'female' = 'male';
   public invitationMap = {
-    male: 'invitarlo',
-    female: 'invitarla'
+    male: 'greet him',
+    female: 'greet her'
   }
 
-  changeClient():void {
+  changeClient(): void {
     this.name = 'Melissa';
     this.gender = 'female';
   }
 
   // i18nPlural
-  public clients: string[] = ['Maria','Pedro','Manuel', 'Hernando', 'Eduardo', 'Melissa', 'Natalia'];
+  public clients: string[] = ['Maria', 'Pedro', 'Manuel', 'Hernando', 'Eduardo', 'Melissa', 'Natalia'];
   public clientsMap = {
-    '=0': 'no tenemos ningún cliente esperando.',
-    '=1': 'tenemos un cliente esperando.',
-    '=2': 'tenemos 2 personas esperando.',
-    'other': 'tenemos # clientes esperando.',
+    '=0': 'we have no clients waiting.',
+    '=1': 'we have one client waiting.',
+    '=2': 'we have 2 people waiting.',
+    'other': 'we have # clients waiting.',
   }
 
   deleteClient(): void {
@@ -43,18 +43,14 @@ export class UncommonPageComponent {
 
   // Async Pipe
   public myObservableTimer: Observable<number> = interval(2000).pipe(
-    tap( value => console.log('tap:', value ) ),
+    tap(value => console.log('tap:', value)),
   );
 
-  public promiseValue: Promise<string> = new Promise( (resolve, reject) => {
+  public promiseValue: Promise<string> = new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve( 'Tenemos data en la promesa.' );
-      console.log( 'Tenemos data en la promesa.' );
-      this.person.name = 'Otro nombre'
+      resolve('We have data in the promise.');
+      console.log('We have data in the promise.');
+      this.person.name = 'Another name'
     }, 3500);
   })
-
-
-
-
 }

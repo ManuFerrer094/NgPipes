@@ -1,73 +1,59 @@
-<!-- Pipes Numéricos -->
+
 <p-panel header="Numeric Pipes" class="p-1">
   <p>
-    Pipes included in Angular - Commonly in the Common Module
+    Pipes included in Angular - Commonly found in the Common Module
   </p>
 </p-panel>
 
 <div class="grid">
 
-  <!-- Decimal Pipe -->
   <div class="col-12 md:col-4">
     <p-card header="Decimal Pipe">
       <p>
         The <strong>Decimal Pipe</strong> performs numeric operations and formats the result.
       </p>
-      <!-- Código de ejemplo -->
       <pre><code>public totalSells: number = {{ totalSells }};</code></pre>
-      <!-- Resultado -->
       <code>{{ (totalSells + 1235 ) | number:'1.2-2' }}</code>
     </p-card>
   </div>
 
-  <!-- Currency Pipe -->
   <div class="col-12 md:col-4">
     <p-card header="Currency Pipe">
       <p>
         The <strong>Currency Pipe</strong> formats numbers as currency.
       </p>
-      <!-- Código de ejemplo -->
       <pre><code>public totalSells: number = {{ totalSells }};</code></pre>
-      <!-- Resultado -->
       <code>{{ totalSells | currency:'HNL':'symbol-narrow':'1.4-4' }}</code>
     </p-card>
   </div>
 
-  <!-- Percent Pipe -->
   <div class="col-12 md:col-4">
     <p-card header="Percent Pipe">
       <p>
         The <strong>Percent Pipe</strong> converts a number into a percentage.
       </p>
-      <!-- Código de ejemplo -->
       <pre><code>public percent: number = {{ percent }};</code></pre>
-      <!-- Resultado -->
       <code>{{ percent | percent: '1.2-2' }}</code>
     </p-card>
   </div>
 
-  <!-- Exponential Pipe -->
-  <div class="col-12 md:col-4">
-    <p-card header="Exponential Pipe">
-      <p>
-        The <strong>Exponential Pipe</strong> formats a number as exponential.
-      </p>
-      <!-- Código de ejemplo -->
-      <pre><code>public largeNumber: number = {{ largeNumber }};</code></pre>
-      <!-- Resultado -->
-      <code>{{ largeNumber | number: '1.2e-3' }}</code>
-    </p-card>
-  </div>
+<div class="col-12 md:col-4">
+  <p-card header="Exponential Pipe">
+    <p>
+      The <strong>Exponential Pipe</strong> formats a number as exponential.
+    </p>
+    <pre><code>public largeNumber: number = {{ largeNumber }};</code></pre>
+    <code>{{ largeNumber | number: '1.2-3' }}</code>
+  </p-card>
+</div>
 
-  <!-- Fixed Pipe -->
+
   <div class="col-12 md:col-4">
     <p-card header="Fixed Pipe">
       <p>
         The <strong>Fixed Pipe</strong> formats a number with a fixed number of digits after the decimal point.
       </p>
-      <!-- Código de ejemplo -->
       <pre><code>public pi: number = {{ pi }};</code></pre>
-      <!-- Resultado -->
       <code>{{ pi | number: '1.2-2' }}</code>
     </p-card>
   </div>

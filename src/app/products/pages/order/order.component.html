@@ -1,7 +1,7 @@
-<!-- Pipes personalizados -->
-<p-panel header="Pipes personalizados" class="p-1">
+<!-- Custom Pipes -->
+<p-panel header="Custom Pipes" class="p-1">
   <p>
-    Pipes personalizados - creados por {{ 'nosotros' | toggleCase: isUpperCase }}
+    Custom pipes - created by {{ 'us' | toggleCase: isUpperCase }}
   </p>
 </p-panel>
 
@@ -20,7 +20,7 @@
     <p-button
       class="mr-2"
       (click)="changeOrder('name')"
-      label="Por nombre"
+      label="By Name"
       icon="pi pi-sort"
       styleClass="p-button-success"
     ></p-button>
@@ -28,7 +28,7 @@
     <p-button
       class="mr-2"
       (click)="changeOrder('canFly')"
-      label="Por volar"
+      label="By Flying"
       icon="pi pi-sort"
       styleClass="p-button-danger"
     ></p-button>
@@ -36,7 +36,7 @@
     <p-button
       class="mr-2"
       (click)="changeOrder('color')"
-      label="Por color"
+      label="By Color"
       icon="pi pi-sort"
       styleClass="p-button-help"
     ></p-button>
@@ -45,12 +45,12 @@
 
 <div class="grid">
   <div class="col mt-2">
-    <p-panel header="Héroes">
+    <p-panel header="Heroes">
       <p-table [value]="heroes | sortBy: orderBy" [tableStyle]="{'min-width': '50rem'}">
         <ng-template pTemplate="header">
           <tr>
-            <th>Nombre</th>
-            <th>Vuela</th>
+            <th>Name</th>
+            <th>Can Fly</th>
             <th>Color</th>
           </tr>
         </ng-template>
